@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipe - GC²</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .org-line-v {
+            width: 2px;
+            background: linear-gradient(180deg, #E86B40 0%, rgba(255, 255, 255, 0.1) 100%);
+            margin: 0 auto;
+        }
+
+        .org-connector-v {
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto;
+        }
+
+        .org-content-expanded {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .org-content-collapsed {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dept-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(232, 107, 64, 0.5);
+        }
+
+        .dept-card.active {
+            background: rgba(255, 255, 255, 0.05);
+            /* slightly lighter than base, darker than hover */
+            border-color: #E86B40;
+            box-shadow: 0 0 20px rgba(232, 107, 64, 0.2);
+        }
+
+        .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .active .arrow-icon {
+            transform: rotate(180deg);
+            color: #E86B40;
+        }
+    </style>
+</head>
+
+<body class="bg-gc2-black text-white font-sans overflow-x-hidden selection:bg-gc2-orange selection:text-white">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute top-[40%] left-[20%] w-[700px] h-[700px] bg-gc2-blue/10 rounded-full blur-[150px]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-header fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-gc2-orange shadow-glow-orange group-hover:scale-150 transition-transform duration-300"></span>
+                    GC²
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="equipe.html" class="nav-link text-white">Equipe</a>
+                    <a href="intervention.html" class="nav-link">Intervention</a>
+                    <a href="contact.html" class="btn-primary ml-4">Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-full left-0 px-6 mt-2">
+            <div class="glass-panel p-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                <a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+                <a href="equipe.html" class="text-white hover:text-gc2-orange font-bold">Equipe</a>
+                <a href="intervention.html" class="text-gray-400 hover:text-white transition">Intervention</a>
+                <a href="contact.html" class="text-gc2-orange font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-12 text-center relative z-10">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up">Notre Organisation</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                Une structure optimisée pour l'excellence opérationnelle.
+            </p>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-6 pb-24">
+
+        <!-- TOP LEVEL: Conseil -->
+        <div class="flex flex-col items-center mb-12 fade-in-up">
+            <div class="glass-panel p-6 w-full max-w-md text-center border-t-4 border-gc2-orange shadow-glow-orange">
+                <h2 class="text-2xl font-bold uppercase tracking-wider">Conseil d'Administration</h2>
+            </div>
+            <div class="org-line-v h-12"></div>
+
+            <!-- Level 2: Direction Generale -->
+            <div class="glass-panel p-6 w-full max-w-md text-center border border-gc2-orange/30">
+                <h2 class="text-xl font-bold uppercase text-gc2-orange tracking-wider">Direction Générale</h2>
+            </div>
+            <div class="h-8 org-connector-v"></div>
+
+            <!-- Level 2.5: DG Roles -->
+            <div class="w-full max-w-5xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="glass-panel p-4 text-center text-sm font-semibold text-gray-300 hover:bg-white/5 transition">
+                        Directeur Administratif & Financier</div>
+                    <div
+                        class="glass-panel p-4 text-center text-sm font-semibold text-gray-300 hover:bg-white/5 transition">
+                        Responsable Des Ressources Humaines</div>
+                    <div
+                        class="glass-panel p-4 text-center text-sm font-semibold text-gray-300 hover:bg-white/5 transition">
+                        Services Informatiques</div>
+                    <div
+                        class="glass-panel p-4 text-center text-sm font-semibold text-gray-300 hover:bg-white/5 transition">
+                        Secrétaire / Standardiste Comptables</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-16 org-connector-v"></div>
+
+        <!-- MAIN SPLIT -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative">
+            <!-- Connector H (Visual only for desktop) -->
+            <div class="hidden lg:block absolute top-[-1px] left-1/4 right-1/4 h-[2px] bg-white/10"></div>
+
+            <!-- Col 1: Direction Technique -->
+            <div class="flex flex-col gap-8 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="text-center">
+                    <div class="glass-panel p-4 inline-block px-12 border-b-4 border-gc2-orange mb-8">
+                        <h2 class="text-2xl font-bold">Direction Technique</h2>
+                    </div>
+                </div>
+
+                <!-- Dept 1 -->
+                <div class="dept-card glass-panel p-6" onclick="toggleDept(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-gc2-orange">Département Infrastructures De Transport</h3>
+                        <svg class="w-5 h-5 text-gray-500 arrow-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="org-content-collapsed">
+                        <ul class="space-y-2 text-gray-400 text-sm pl-4 list-disc marker:text-gc2-orange">
+                            <li>Ingénieurs Routiers</li>
+                            <li>Experts Géotechniciens</li>
+                            <li>Experts Ouvrages d'Art</li>
+                            <li>Experts S.I.G</li>
+                            <li>Économistes de Transports</li>
+                            <li>Équipe Contrôle des travaux</li>
+                            <li>Topographes</li>
+                            <li>Techniciens Routiers</li>
+                            <li>Techniciens Ouvrages</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dept 2 -->
+                <div class="dept-card glass-panel p-6" onclick="toggleDept(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-gc2-orange">Département Hydraulique Et Environnement</h3>
+                        <svg class="w-5 h-5 text-gray-500 arrow-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="org-content-collapsed">
+                        <ul class="space-y-2 text-gray-400 text-sm pl-4 list-disc marker:text-gc2-orange">
+                            <li>Experts Hydrologues</li>
+                            <li>Experts Hydrauliciens</li>
+                            <li>Experts Environnementalistes</li>
+                            <li>Experts Réseaux A.E.P/ E.U</li>
+                            <li>Experts Agro-hydrologues</li>
+                            <li>Équipe Contrôle des travaux</li>
+                            <li>Techniciens en Hydraulique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dept 3 -->
+                <div class="dept-card glass-panel p-6" onclick="toggleDept(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-gc2-orange">Départements Bâtiments & Architecture</h3>
+                        <svg class="w-5 h-5 text-gray-500 arrow-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="org-content-collapsed">
+                        <ul class="space-y-2 text-gray-400 text-sm pl-4 list-disc marker:text-gc2-orange">
+                            <li>Ingénieurs Structures / Bâtiment</li>
+                            <li>Ingénieurs H.S.E</li>
+                            <li>Équipe de Contrôle des travaux</li>
+                            <li>Métreurs</li>
+                            <li>Architectes</li>
+                            <li>Techniciens en Bâtiments</li>
+                            <li>Techniciens Fluides/Lots spéc.</li>
+                            <li>Techniciens Gros Œuvres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dept 4 -->
+                <div class="dept-card glass-panel p-6" onclick="toggleDept(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-gc2-orange">Département Conseils Et Études Stratégiques</h3>
+                        <svg class="w-5 h-5 text-gray-500 arrow-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="org-content-collapsed">
+                        <ul class="space-y-2 text-gray-400 text-sm pl-4 list-disc marker:text-gc2-orange">
+                            <li>Experts économistes</li>
+                            <li>Ingénieurs industriels</li>
+                            <li>Chargés d'études</li>
+                            <li>Agroéconomistes</li>
+                            <li>Experts S.I.G</li>
+                            <li>Enquêteurs</li>
+                            <li>Métreurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2: Direction Commerciale -->
+            <div class="flex flex-col gap-8 fade-in-up" style="animation-delay: 0.3s;">
+                <div class="text-center">
+                    <div class="glass-panel p-4 inline-block px-12 border-b-4 border-white/20 mb-8">
+                        <h2 class="text-2xl font-bold">Direction Commerciale</h2>
+                    </div>
+                </div>
+
+                <div class="dept-card glass-panel p-6" onclick="toggleDept(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-white">Département De Prospection Commerciale</h3>
+                        <svg class="w-5 h-5 text-gray-500 arrow-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="org-content-collapsed">
+                        <ul class="space-y-2 text-gray-400 text-sm pl-4 list-disc marker:text-white">
+                            <li>Directeur de la prospection</li>
+                            <li>Ingénieurs offres</li>
+                            <li>Chargés d'études</li>
+                            <li>Commerciaux</li>
+                            <li>Graphistes</li>
+                            <li>Assistantes Commerciales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pie Chart Visual Placeholder (Modernized) -->
+                <div class="glass-panel p-8 mt-8 flex flex-col items-center justify-center text-center">
+                    <h4 class="text-sm font-bold text-gray-500 mb-6 uppercase tracking-widest">Répartition Globale</h4>
+                    <div class="relative w-48 h-48">
+                        <!-- CSS Pie Chart -->
+                        <div class="w-full h-full rounded-full"
+                            style="background: conic-gradient(#E86B40 0% 35%, #1E293B 35% 50%, #94A3B8 50% 80%, #64748B 80% 100%); box-shadow: 0 0 30px rgba(0,0,0,0.5);">
+                        </div>
+                        <!-- Inner Hole for Donut -->
+                        <div class="absolute inset-4 bg-gc2-black rounded-full flex items-center justify-center">
+                            <span class="text-2xl font-bold text-white">GC²</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-x-8 gap-y-2 text-xs text-left">
+                        <div class="flex items-center"><span
+                                class="w-3 h-3 bg-gc2-orange rounded-full mr-2"></span>Tunisie (35%)</div>
+                        <div class="flex items-center"><span
+                                class="w-3 h-3 bg-slate-800 rounded-full mr-2"></span>International (15%)</div>
+                        <div class="flex items-center"><span
+                                class="w-3 h-3 bg-gray-400 rounded-full mr-2"></span>Consulting (30%)</div>
+                        <div class="flex items-center"><span
+                                class="w-3 h-3 bg-slate-500 rounded-full mr-2"></span>Worldwide (20%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; 2024 GC². All rights reserved.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script>
+        function toggleDept(element) {
+            const content = element.querySelector('.org-content-collapsed, .org-content-expanded');
+
+            // Toggle active state for styling
+            element.classList.toggle('active');
+
+            // Toggle content visibility
+            if (content.classList.contains('org-content-collapsed')) {
+                content.classList.remove('org-content-collapsed');
+                content.classList.add('org-content-expanded');
+            } else {
+                content.classList.remove('org-content-expanded');
+                content.classList.add('org-content-collapsed');
+            }
+        }
+
+        // Expose function to global scope because module imports are strict
+        window.toggleDept = toggleDept;
+    </script>
+</body>
+
+</html>

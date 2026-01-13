@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - GC²</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg-gc2-black text-white font-sans overflow-x-hidden selection:bg-gc2-orange selection:text-white">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gc2-orange/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-header fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-gc2-orange shadow-glow-orange group-hover:scale-150 transition-transform duration-300"></span>
+                    GC²
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="equipe.html" class="nav-link">Equipe</a>
+                    <a href="intervention.html" class="nav-link">Intervention</a>
+                    <a href="contact.html" class="btn-primary ml-4 text-white">Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-full left-0 px-6 mt-2">
+            <div class="glass-panel p-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                <a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+                <a href="equipe.html" class="text-gray-400 hover:text-white transition">Equipe</a>
+                <a href="intervention.html" class="text-gray-400 hover:text-white transition">Intervention</a>
+                <a href="contact.html" class="text-gc2-orange font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 text-center relative z-10">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up">Parlons de l'Avenir</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                Vous avez un projet d'envergure ? Nos équipes sont prêtes à relever le défi.
+            </p>
+        </div>
+    </section>
+
+    <section class="pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Info Column -->
+                <div class="lg:w-1/3 space-y-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="glass-panel p-8 hover:bg-white/5 transition duration-300">
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-gc2-orange">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Notre Siège</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    41 Avenue Kheireddine Pacha,<br>
+                                    Bloc C, Apt CC3,<br>
+                                    Montplaisir - 1073 Tunis, Tunisie
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 hover:bg-white/5 transition duration-300">
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-gc2-orange">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Téléphone</h3>
+                                <p class="text-gray-400">+216 71 902 880</p>
+                                <p class="text-gray-500 text-sm mt-1">Fax: +216 71 902 788</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 hover:bg-white/5 transition duration-300">
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-gc2-orange">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Email</h3>
+                                <a href="mailto:contact@gc2-group.com"
+                                    class="text-gc2-orange hover:text-white transition">contact@gc2-group.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:w-2/3 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="glass-panel p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-white mb-8">Envoyez-nous un message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Nom Complet</label>
+                                    <input type="text" id="name" required
+                                        class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-gc2-orange focus:bg-white/10 transition duration-300"
+                                        placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Société</label>
+                                    <input type="text" id="company"
+                                        class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-gc2-orange focus:bg-white/10 transition duration-300"
+                                        placeholder="Nom de l'entreprise">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                                    <input type="email" id="email" required
+                                        class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-gc2-orange focus:bg-white/10 transition duration-300"
+                                        placeholder="exemple@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Téléphone</label>
+                                    <input type="tel" id="phone"
+                                        class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-gc2-orange focus:bg-white/10 transition duration-300"
+                                        placeholder="+216 ...">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                <textarea id="message" rows="5" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-gc2-orange focus:bg-white/10 transition duration-300"
+                                    placeholder="Détails de votre projet..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="btn-primary w-full py-4 text-lg shadow-glow-orange hover:shadow-orange-500/50 flex justify-center items-center">
+                                <span>Envoyer la demande</span>
+                            </button>
+                            <div id="form-status" class="hidden text-center text-sm font-bold mt-4"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="mt-20 glass-panel p-2 fade-in-up" style="animation-delay: 0.4s;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.386991395567!2d10.18354531569661!3d36.8154622749557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd346146030c5f%3A0x296cc603387799!2sMontplaisir%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1625666666666!5m2!1sfr!2stn"
+                    width="100%" height="450"
+                    style="filter: grayscale(100%) invert(92%) contrast(83%); border:0; border-radius: 0.5rem;"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; 2024 GC². All rights reserved.
+        </div>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/contact-form.js"></script>
+</body>
+
+</html>

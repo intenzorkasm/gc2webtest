@@ -1,0 +1,19 @@
+export const projects = [
+    { "id": "11004", "title": "Etude Protections", "subtitle": "Hydraulique et Environnement", "cat": "Hydraulique et Environnement", "intro": "Il s’agit d’une mission d’Élaboration des études d’exécution pour le projet de protection contre les inondations de la ville de Boussalem : Canal bétonné de 20m sur 350m de longueur." },
+    { "id": "29002", "title": "Etude station epuration", "subtitle": "Hydraulique et Environnement", "cat": "Hydraulique et Environnement", "intro": "Il s’agit d’une mission d’Élaboration des plans d’exécution pour la station d’épuration des eaux usées de Limay - Porcheville..." },
+    { "id": "10001", "title": "Etude d'un OA en Bipoutre", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Il s’agit d’une mission d’Élaboration des plans d’exécution pour la réalisation du 12 ouvrages cadres en BA dans le cadre du projet d’aménagement de la nouvelle ligne TGV Est Européenne..." },
+    { "id": "10004", "title": "Etude d'un OA en Bipoutre", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Il s’agit d’une mission d’ Élaboration des plans d’exécution pour la réalisation du viaduc Haspelbeachel..." },
+    { "id": "10005", "title": "Etude d'un OA en Bipoutre", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Il s’agit d’une mission d’Élaboration des plans d’exécution pour la réalisation du viaduc Bourgaltroff..." },
+    { "id": "12016", "title": "Etude Extension Centre Commercial", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Rénovation et d’extension du centre commercial Parly 2..." },
+    { "id": "28001", "title": "Etude et expertise d'un OA Franchissement", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Ouvrage de franchissement de Oued béjà sur la RN11..." },
+    { "id": "28004", "title": "Etude des OA mixtes", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "2 ouvrages d’art mixtes de franchissement des vallées de l’Ire et du Beaudron..." },
+    { "id": "28008", "title": "Mission de Controle routes 2.5km", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Echangeur de Manouba (2ème tranche)..." },
+    { "id": "29011", "title": "Etude d 'un OA du Carrefour", "subtitle": "Ouvrages d'Art", "cat": "Ouvrages d'Art", "intro": "Ouvrages d’art du carrefour RD313-RD300... Rocade nord du Mans..." },
+    { "id": "12003", "title": "CTRL - Autoroute O. Zarga", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Coordination pour l’Autoroute A4 dans le Nord de la Tunisie..." },
+    { "id": "12014", "title": "EXEC - OA voie ferrée RN6 Béjà", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Réparation et de confortement de l’ouvrage de franchissement de la voie ferrée par la RN6..." },
+    { "id": "13003", "title": "CTRL Points Gliss JENDOUBA", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Réparation des points de glissement de terrain dans le gouvernorat de Jendouba..." },
+    { "id": "13006", "title": "EXEC - LGV Bretagne", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Construction de deux ouvrages pont rail en cadre BA... LGV Bretagne-Pays de la Loire..." },
+    { "id": "14001", "title": "EXEC Kitabi - Crête Congo", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Route Kitabi – Crête Congo/Nil (Rwanda)..." },
+    { "id": "14002", "title": "EXEC Voiries BUTARE", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Voiries urbaines BUTARE (Rwanda)..." },
+    { "id": "29013", "title": "EXEC - 2x2 voies Poissy", "subtitle": "Routes et Autoroutes", "cat": "Routes et Autoroutes", "intro": "Mise à 2x2 voies de la RD113... Poissy..." }
+];

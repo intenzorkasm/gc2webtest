@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets - GC²</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg-gc2-black text-white font-sans overflow-x-hidden selection:bg-gc2-orange selection:text-white">
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gc2-orange/5 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-gc2-blue/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-header fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-gc2-orange shadow-glow-orange group-hover:scale-150 transition-transform duration-300"></span>
+                    GC²
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="projets.html" class="nav-link text-white">Projets</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="equipe.html" class="nav-link">Equipe</a>
+                    <a href="intervention.html" class="nav-link">Intervention</a>
+                    <a href="contact.html" class="btn-primary ml-4">Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-full left-0 px-6 mt-2">
+            <div class="glass-panel p-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                <a href="projets.html" class="text-white hover:text-gc2-orange font-bold">Projets</a>
+                <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+                <a href="equipe.html" class="text-gray-400 hover:text-white transition">Equipe</a>
+                <a href="intervention.html" class="text-gray-400 hover:text-white transition">Intervention</a>
+                <a href="contact.html" class="text-gc2-orange font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up">Nos Références</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                L'excellence technique au service des infrastructures durables. Explorez nos réalisations emblématiques.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mx-auto px-6 py-12 min-h-screen">
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in-up" style="animation-delay: 0.2s;">
+            <button
+                class="filter-btn px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 bg-gc2-orange text-white shadow-glow-orange hover:scale-105 active:scale-95"
+                data-filter="all">TOUT</button>
+            <button
+                class="filter-btn px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white active:scale-95"
+                data-filter="Hydraulique et Environnement">HYDRAULIQUE</button>
+            <button
+                class="filter-btn px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white active:scale-95"
+                data-filter="Ouvrages d'Art">OUVRAGES D'ART</button>
+            <button
+                class="filter-btn px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white active:scale-95"
+                data-filter="Routes et Autoroutes">ROUTES</button>
+        </div>
+
+        <!-- Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Content injected by JS -->
+            <div class="col-span-full h-64 flex items-center justify-center text-gray-500">
+                Chargement...
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; 2024 GC². All rights reserved.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/projects-page.js"></script>
+</body>
+
+</html>

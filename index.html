@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GC² - Future of Engineering</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg-gc2-black text-white font-sans overflow-x-hidden selection:bg-gc2-orange selection:text-white">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div
+            class="absolute top-0 left-0 w-[500px] h-[500px] bg-gc2-orange/10 rounded-full blur-[120px] mix-blend-screen opacity-30 animate-pulse">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gc2-blue/20 rounded-full blur-[120px] mix-blend-screen opacity-30">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky-header fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-gc2-orange shadow-glow-orange group-hover:scale-150 transition-transform duration-300"></span>
+                    GC²
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white">Accueil</a>
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="equipe.html" class="nav-link">Equipe</a>
+                    <a href="intervention.html" class="nav-link">Intervention</a>
+                    <a href="contact.html" class="btn-primary ml-4">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-full left-0 px-6 mt-2">
+            <div class="glass-panel p-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-white hover:text-gc2-orange transition">Accueil</a>
+                <a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+                <a href="equipe.html" class="text-gray-400 hover:text-white transition">Equipe</a>
+                <a href="intervention.html" class="text-gray-400 hover:text-white transition">Intervention</a>
+                <a href="contact.html" class="text-gc2-orange font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen relative flex items-center justify-center overflow-hidden pt-20">
+        <!-- Abstract Hero Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gc2-black/60 z-10"></div>
+            <img src="photos/g3.jpg" class="w-full h-full object-cover opacity-40 scale-105 animate-float" alt="">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-gc2-orange text-sm font-medium tracking-wide mb-6 backdrop-blur-md fade-in-up">
+                GÉNÉRALE CONSULTING GENIE CIVIL
+            </span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-tight fade-in-up"
+                style="animation-delay: 0.1s;">
+                Engineering the <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gc2-orange to-red-500">Future
+                    Infrastructure</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light fade-in-up"
+                style="animation-delay: 0.2s;">
+                Une expertise internationale en ingénierie civile, alliant innovation technique et rigueur d'exécution
+                pour les projets les plus ambitieux.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center fade-in-up" style="animation-delay: 0.3s;">
+                <a href="projets.html" class="btn-primary">
+                    Explorer nos Projets
+                </a>
+                <a href="services.html" class="btn-glass flex items-center justify-center gap-2 group">
+                    <span>Nos Services</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 border-y border-white/5 bg-white/[0.02]">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center fade-in-up">
+                    <div class="text-4xl font-bold text-white mb-2">15+</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-widest">Années d'Expérience</div>
+                </div>
+                <div class="text-center fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="text-4xl font-bold text-white mb-2">6</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-widest">Pays d'Intervention</div>
+                </div>
+                <div class="text-center fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="text-4xl font-bold text-white mb-2">50+</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-widest">Projets Majeurs</div>
+                </div>
+                <div class="text-center fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="text-4xl font-bold text-white mb-2">20+</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-widest">Experts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Projects Parallax/Grid -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6 mb-16 flex justify-between items-end">
+            <div class="fade-in-up">
+                <h2 class="section-title">Réalisations Récentes</h2>
+                <p class="text-gray-400 max-w-lg">Découvrez comment nous façonnons le paysage de demain à travers nos
+                    interventions techniques.</p>
+            </div>
+            <a href="projets.html"
+                class="hidden md:flex items-center text-gc2-orange hover:text-white transition-colors duration-300">
+                Voir tout <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1 (Large) -->
+                <a href="projets.html#10001"
+                    class="group relative aspect-[16/9] rounded-2xl overflow-hidden glass-panel fade-in-up">
+                    <div class="absolute inset-0 bg-gc2-surface z-0">
+                        <img src="photos/g1.jpg" alt=""
+                            class="w-full h-full object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-40">
+                    </div>
+                    <div
+                        class="absolute inset-0 p-8 flex flex-col justify-end z-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <span
+                                class="text-gc2-orange text-xs font-bold tracking-widest uppercase mb-2 block">Ouvrages
+                                d'Art</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">OA en Bipoutre France</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                                Etude d'un ouvrage d'art majeur en France, démontrant notre expertise en structures
+                                complexes.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 2 -->
+                <a href="projets.html#10005"
+                    class="group relative aspect-[16/9] rounded-2xl overflow-hidden glass-panel fade-in-up"
+                    style="animation-delay: 0.1s;">
+                    <div class="absolute inset-0 bg-gc2-surface z-0">
+                        <img src="photos/g2.jpg" alt=""
+                            class="w-full h-full object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-40">
+                    </div>
+                    <div
+                        class="absolute inset-0 p-8 flex flex-col justify-end z-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <span
+                                class="text-gc2-orange text-xs font-bold tracking-widest uppercase mb-2 block">Ferroviaire</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Réseau Ferré de France</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                                Collaboration stratégique pour le développement et la maintenance du réseau ferré.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 3 -->
+                <a href="projets.html#12003"
+                    class="group relative aspect-[16/9] rounded-2xl overflow-hidden glass-panel fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    <div class="absolute inset-0 bg-gc2-surface z-0">
+                        <img src="photos/g3.jpg" alt=""
+                            class="w-full h-full object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-40">
+                    </div>
+                    <div
+                        class="absolute inset-0 p-8 flex flex-col justify-end z-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <span
+                                class="text-gc2-orange text-xs font-bold tracking-widest uppercase mb-2 block">Autoroute</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Autoroute Oued Zarga</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                                Infrastructure routière majeure connectant les régions clés de la Tunisie.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project Card 4 -->
+                <a href="projets.html#14002"
+                    class="group relative aspect-[16/9] rounded-2xl overflow-hidden glass-panel fade-in-up"
+                    style="animation-delay: 0.3s;">
+                    <div class="absolute inset-0 bg-gc2-surface z-0">
+                        <img src="photos/g4.jpg" alt=""
+                            class="w-full h-full object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-40">
+                    </div>
+                    <div
+                        class="absolute inset-0 p-8 flex flex-col justify-end z-10 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            <span class="text-gc2-orange text-xs font-bold tracking-widest uppercase mb-2 block">Voirie
+                                Urbaine</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Voiries BUTARE Rwanda</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                                Développement urbain et aménagement de voiries modernes à Butare.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlight CSS Grid -->
+    <section class="py-24 bg-gc2-surface relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-gc2-blue/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 fade-in-up">
+                    <h2 class="section-title">Expertise <br> <span class="text-white">Multidisciplinaire</span></h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        GC² déploie ses compétences à travers un spectre complet de services d'ingénierie, garantissant
+                        une cohérence technique de la conception à la réalisation.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div
+                            class="flex items-center p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/10 group cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-gc2-orange/20 text-gc2-orange flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Conseils & Expertises</h4>
+                                <p class="text-gray-500 text-sm">Etudes de faisabilité et impact</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-center p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/10 group cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-gc2-blue/50 text-blue-400 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Etudes Techniques</h4>
+                                <p class="text-gray-500 text-sm">Conception détaillée et dimensionnement</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-center p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/10 group cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Suivi de Travaux</h4>
+                                <p class="text-gray-500 text-sm">Contrôle qualité et supervision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-gc2-orange/20 to-transparent mix-blend-overlay z-10 transition duration-500 group-hover:opacity-75">
+                        </div>
+                        <img src="images/gcivil.jpg" alt="Engineering"
+                            class="w-full h-auto transform scale-100 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gc2-orange/10 z-0"></div>
+        <div
+            class="absolute inset-0 bg-[url('images/intervention.jpg')] bg-cover bg-fixed opacity-10 grayscale mix-blend-luminosity">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter fade-in-up">Prêt à démarrer votre
+                projet ?</h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                Discutons de vos besoins en ingénierie et trouvons les solutions les plus innovantes.
+            </p>
+            <a href="contact.html"
+                class="btn-primary inline-flex items-center gap-2 text-lg px-10 py-4 shadow-glow-orange fade-in-up"
+                style="animation-delay: 0.2s;">
+                Nous Contacter
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html"
+                        class="text-3xl font-bold tracking-tighter text-white mb-6 block flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-gc2-orange shadow-glow-orange"></span>
+                        GC²
+                    </a>
+                    <p class="text-gray-500 max-w-sm mb-8">
+                        Générale Consulting en Génie Civil. <br>
+                        Innovation, Expertise et Excellence opérationnelle pour les infrastructures de demain.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gc2-orange hover:text-white transition-colors duration-300">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gc2-orange hover:text-white transition-colors duration-300">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.641c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Navigation</h4>
+                    <ul class="space-y-4 text-gray-500">
+                        <li><a href="projets.html" class="hover:text-gc2-orange transition">Nos Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gc2-orange transition">Services</a></li>
+                        <li><a href="equipe.html" class="hover:text-gc2-orange transition">L'Equipe</a></li>
+                        <li><a href="partenaires.html" class="hover:text-gc2-orange transition">Partenaires</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-500">
+                        <li>Centre les jardins du Pacha,<br>Montplaisir - 1073 Tunis</li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-gc2-orange"></div> +216 71 902 880
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-gc2-orange"></div> contact@gc2-group.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <p>&copy; 2024 GC². All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

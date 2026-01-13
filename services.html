@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - GC²</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg-gc2-black text-white font-sans overflow-x-hidden selection:bg-gc2-orange selection:text-white">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute top-[20%] right-[-10%] w-[800px] h-[800px] bg-gc2-orange/5 rounded-full blur-[150px]">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky-header fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="glass-panel px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-gc2-orange shadow-glow-orange group-hover:scale-150 transition-transform duration-300"></span>
+                    GC²
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="services.html" class="nav-link text-white">Services</a>
+                    <a href="equipe.html" class="nav-link">Equipe</a>
+                    <a href="intervention.html" class="nav-link">Intervention</a>
+                    <a href="contact.html" class="btn-primary ml-4">Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-full left-0 px-6 mt-2">
+            <div class="glass-panel p-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                <a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a>
+                <a href="services.html" class="text-white hover:text-gc2-orange font-bold">Services</a>
+                <a href="equipe.html" class="text-gray-400 hover:text-white transition">Equipe</a>
+                <a href="intervention.html" class="text-gray-400 hover:text-white transition">Intervention</a>
+                <a href="contact.html" class="text-gc2-orange font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Header -->
+    <section class="pt-40 pb-20 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up">Compétences Globales</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                De l'étude préliminaire à la supervision des travaux, nous maîtrisons chaque étape de vos projets.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="pb-24">
+        <div class="container mx-auto px-6">
+            <div class="space-y-8">
+                <!-- Service 1 -->
+                <div
+                    class="glass-panel p-10 md:p-14 flex flex-col md:flex-row gap-10 items-start group hover:bg-white/5 transition-colors duration-500 fade-in-up">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-gc2-orange to-red-500 flex items-center justify-center shadow-glow-orange shrink-0 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 group-hover:text-gc2-orange transition-colors">
+                            Conseils et Expertises</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-gc2-orange mr-4"></span>
+                                Etudes de faisabilité technico-économique
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-gc2-orange mr-4"></span>
+                                Études d'implantation préliminaire
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-gc2-orange mr-4"></span>
+                                Études d'impact sur l'environnement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel p-10 md:p-14 flex flex-col md:flex-row gap-10 items-start group hover:bg-white/5 transition-colors duration-500 fade-in-up"
+                    style="animation-delay: 0.1s;">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-glow-blue shrink-0 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 group-hover:text-blue-400 transition-colors">
+                            Etudes Techniques Détaillées</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mr-4"></span>
+                                Aménagement routiers et autoroutiers
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mr-4"></span>
+                                Ouvrages d’Art et échangeurs
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mr-4"></span>
+                                Équipements ferroviaires
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mr-4"></span>
+                                Aménagements hydrauliques & barrages
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel p-10 md:p-14 flex flex-col md:flex-row gap-10 items-start group hover:bg-white/5 transition-colors duration-500 fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shrink-0 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 group-hover:text-emerald-400 transition-colors">
+                            Etudes d’exécution</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 mr-4"></span>
+                                Structures béton armé & précontraint
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 mr-4"></span>
+                                Voiries et réseaux divers (VRD)
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 mr-4"></span>
+                                Génie civil de l'eau
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-panel p-10 md:p-14 flex flex-col md:flex-row gap-10 items-start group hover:bg-white/5 transition-colors duration-500 fade-in-up"
+                    style="animation-delay: 0.3s;">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shrink-0 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 group-hover:text-purple-400 transition-colors">
+                            Contrôle et Supervision</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-purple-500 mr-4"></span>
+                                Assistance Passation des Marchés
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-purple-500 mr-4"></span>
+                                Ordonnancement, Pilotage (OPC)
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-purple-500 mr-4"></span>
+                                Suivi et contrôle technique
+                            </div>
+                            <div class="flex items-center text-gray-400 border-b border-white/5 pb-2">
+                                <span class="w-2 h-2 rounded-full bg-purple-500 mr-4"></span>
+                                Assistance exploitation et maintenance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; 2024 GC². All rights reserved.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
